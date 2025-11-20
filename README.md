@@ -117,10 +117,10 @@ bash scripts/setup-sudoers.sh
 sudo visudo -f /etc/sudoers.d/freeradius-restart
 ```
 
-Add this line (replace `gnetid` with your PM2 user):
+Add this line (replace `your_username` with your PM2 user):
 ```
-gnetid ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart freeradius
-gnetid ALL=(ALL) NOPASSWD: /usr/bin/systemctl status freeradius
+your_username ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart freeradius
+your_username ALL=(ALL) NOPASSWD: /usr/bin/systemctl status freeradius
 ```
 
 Save and test:
@@ -237,7 +237,7 @@ If you experience timezone issues:
 
 ## 📝 License
 
-Private - Proprietary software for AIBILL RADIUS
+MIT License - Free for commercial and personal use
 
 ## 👨‍💻 Development
 

@@ -18,14 +18,14 @@ async function main() {
     return;
   }
 
-  // Hash password
-  const hashedPassword = await bcrypt.hash('aibillradius', 10);
+  // Hash password (default: admin123 - CHANGE THIS!)
+  const hashedPassword = await bcrypt.hash('admin123', 10);
 
   // Create super admin
   const admin = await prisma.adminUser.create({
     data: {
       username: 'superadmin',
-      email: 'admin@aibill.com',
+      email: 'admin@example.com',
       password: hashedPassword,
       name: 'Super Administrator',
       role: 'SUPER_ADMIN',
@@ -36,8 +36,8 @@ async function main() {
   console.log('✅ Super admin created successfully!');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   console.log('Username: superadmin');
-  console.log('Password: aibillradius');
-  console.log('Email: admin@aibill.com');
+  console.log('Password: admin123');
+  console.log('Email: admin@example.com');
   console.log('Role: SUPER_ADMIN');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   console.log('⚠️  Please change the password after first login!');
